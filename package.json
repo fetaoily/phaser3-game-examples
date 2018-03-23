@@ -3,6 +3,7 @@
     "start": "serve"
   },
   "dependencies": {
+    "jshint": "2.9.5",
     "phaser": "3.2.1",
     "serve": "6.5.3"
   }
