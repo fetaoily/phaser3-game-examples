@@ -20,8 +20,10 @@
   class PlayGame extends ErtaoGameScene {
     constructor() {
       super();
-      this.triangle = null;
-      this.group = null;
+      this.group1 = null;
+      this.group2 = null;
+      this.triangle1 = null;
+      this.triangle2 = null;
     }
 
     preload() {
@@ -29,17 +31,18 @@
     }
 
     create() {
-      this.triangle = new Phaser.Geom.Triangle.BuildRight(200, 400, 300, 200);
+      this.group1 = this.add.group({ key: 'ball', frameQuantity: 64 });
+      this.group2 = this.add.group({ key: 'ball', frameQuantity: 300 });
       //
-      this.group = this.add.group({ key: 'ball', frameQuantity: 64 });
+      this.triangle1 = new Phaser.Geom.Triangle.BuildRight(200, 400, 300, 200);
+      this.triangle2 = new Phaser.Geom.Triangle.BuildEquilateral(400, 200, 380);
       //
-      Phaser.Actions.PlaceOnTriangle(this.group.getChildren(), this.triangle);
+      Phaser.Actions.PlaceOnTriangle(this.group1.getChildren(), this.triangle1);
+      Phaser.Actions.PlaceOnTriangle(this.group2.getChildren(), this.triangle2);
     }
 
     update() {}
 
-    render() {
-      
-    }
+    render() {}
   }
 })();
