@@ -15,7 +15,7 @@
     window.game = game = new Phaser.Game(config);
   };
 
-  class PlayGame {
+  class PlayGame extends ErtaoGameScene {
     preload() {
       this.load.spritesheet('diamonds', '/assets/sprites/diamonds32x24x5.png', {
         frameWidth: 32,

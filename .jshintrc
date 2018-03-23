@@ -69,6 +69,8 @@
   "wsh": false,
   "yui": false,
   "globals": {
-    "Phaser": true
+    "Phaser": true,
+    "ErtaoGame": true,
+    "ErtaoGameScene": true
   }
 }
