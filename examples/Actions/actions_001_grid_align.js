@@ -2,9 +2,10 @@
   'use strict';
 
   let game;
+  let gameConfig;
 
   window.onload = () => {
-    let config = {
+    window.gameConfig = gameConfig = {
       type: Phaser.AUTO,
       width: 800,
       height: 600,
@@ -12,8 +13,14 @@
       parent: 'phaser-example',
       scene: [PlayGame]
     };
-    window.game = game = new Phaser.Game(config);
+    window.game = game = new NewGame(gameConfig);
   };
+
+  class NewGame extends ErtaoGame {
+    constructor(config) {
+      super(config);
+    }
+  }
 
   class PlayGame extends ErtaoGameScene {
     preload() {
