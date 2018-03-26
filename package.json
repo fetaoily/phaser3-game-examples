@@ -3,6 +3,7 @@
     "start": "serve"
   },
   "dependencies": {
+    "babel-es6-polyfill": "1.1.0",
     "jshint": "2.9.5",
     "phaser": "3.3.0",
     "serve": "6.5.3"
