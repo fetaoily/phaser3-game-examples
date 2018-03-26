@@ -71,6 +71,7 @@
   "globals": {
     "Phaser": true,
     "ErtaoGame": true,
-    "ErtaoGameScene": true
+    "ErtaoGameScene": true,
+    "dat": true
   }
 }

@@ -90,7 +90,7 @@
         this.cameras.main.rotation += 0.01;
       }, this);
       //
-      this.input.keyboard.on('keydown_X', () => {
+      this.input.keyboard.on('keydown_X', (event) => {
         this.cameras.main.rotation -= 0.01;
       }, this);
       //
