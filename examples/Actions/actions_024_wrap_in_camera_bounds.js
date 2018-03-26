@@ -45,7 +45,7 @@
         shape.x += 1 + 0.1 * i;
         shape.y += 1 + 0.1 * i;
       });
-      // Phaser.Actions.WrapInRectangle(this.shapes, this.rect, 72); // version>=3.3.0
+      Phaser.Actions.WrapInRectangle(this.shapes, this.rect, 72); // version>=3.3.0
       //
       this.draw();
     }

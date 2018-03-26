@@ -36,7 +36,7 @@
     update() {
       let children = this.group.getChildren();
       Phaser.Actions.IncXY(children, 1, 1);
-      // Phaser.Actions.WrapInRectangle(children, this.rect); // version>=3.3.0
+      Phaser.Actions.WrapInRectangle(children, this.rect); // version>=3.3.0
     }
 
     render() {}
