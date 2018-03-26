@@ -369,7 +369,7 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "http://registry.npm.taobao.org/etag/download/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
-eventemitter3@^3.0.0:
+eventemitter3@^3.0.1:
   version "3.0.1"
   resolved "http://registry.npm.taobao.org/eventemitter3/download/eventemitter3-3.0.1.tgz#4ce66c3fc5b5a6b9f2245e359e1938f1ab10f960"
 
@@ -583,7 +583,7 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/isexe/download/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
 
-jshint@^2.9.5:
+jshint@2.9.5:
   version "2.9.5"
   resolved "http://registry.npm.taobao.org/jshint/download/jshint-2.9.5.tgz#1e7252915ce681b40827ee14248c46d34e9aa62c"
   dependencies:
@@ -780,11 +780,11 @@ path-type@3.0.0:
   dependencies:
     pify "^3.0.0"
 
-phaser@3.2.1:
-  version "3.2.1"
-  resolved "http://registry.npm.taobao.org/phaser/download/phaser-3.2.1.tgz#63aeb5435cbb0bc60d81eb1fea0d566e365d98b1"
+phaser@3.3.0:
+  version "3.3.0"
+  resolved "http://registry.npm.taobao.org/phaser/download/phaser-3.3.0.tgz#9b9132fb973f280cce38c842db173569c6c05af1"
   dependencies:
-    eventemitter3 "^3.0.0"
+    eventemitter3 "^3.0.1"
 
 pify@^3.0.0:
   version "3.0.0"
