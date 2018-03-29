@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "serve"
+    "start": "serve -o"
   },
   "dependencies": {
     "babel-es6-polyfill": "1.1.0",
