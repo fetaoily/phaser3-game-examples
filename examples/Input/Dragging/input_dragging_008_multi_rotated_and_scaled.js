@@ -20,6 +20,8 @@
   class PlayGame extends ErtaoGameScene {
     constructor () {
       super();
+      this.counter = 0;
+      this.scaleTimer = 0;
     }
 
     preload () {
@@ -57,6 +59,11 @@
 
     update () {
       Phaser.Actions.Rotate(this.cards.getChildren(), 0.01);
+      if (this.time.now > this.scaleTimer) {
+        this.counter++;
+        Phaser.Actions.ScaleXY(this.cards.getChildren(), Math.sin(this.counter));
+        this.scaleTimer = this.time.now + 500;
+      }
     }
 
     render () {
