@@ -33,7 +33,7 @@
 
     create () {
       // Limited to 20 objects in the pool, not allowed to grow beyond it
-      // this.bullets = this.pool.createObjectPool(Bullet,20);
+      // this.bullets = this.pool.createObjectPool(Bullet, 20);
       this.bullets = this.add.group({
         classType: Bullet,
         maxSize: 20,
