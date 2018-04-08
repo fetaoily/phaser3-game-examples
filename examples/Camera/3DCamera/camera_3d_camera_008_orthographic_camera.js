@@ -74,7 +74,7 @@
         'image.x: ' + this.image.x,
         'image.y: ' + this.image.y,
         'image.z: ' + this.image.z
-      ])
+      ]);
     }
 
     render () {
