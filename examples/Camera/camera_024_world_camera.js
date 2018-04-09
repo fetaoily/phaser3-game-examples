@@ -157,7 +157,7 @@
       this.graphics.lineBetween(0, 0, 1600, 1200);
       this.graphics.lineBetween(1600, 0, 0, 1200);
       // shapes
-      if (this.hitShap === this.rect1) {
+      if (this.hitShape === this.rect1) {
         this.graphics.fillStyle(0xff0000);
         this.graphics.fillRectShape(this.rect1);
       } else {
