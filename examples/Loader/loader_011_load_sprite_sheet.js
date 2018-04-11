@@ -22,12 +22,35 @@
 
     preload () {
       // Standard:
-      this.load.spritesheet('explosion', 'assets/sprites/explosion.png', {
-        frameWidth: 64,
-        frameHeight: 64,
-        endFrame: 23
-      });
-      this.load.spritesheet('balls', 'assets/sprites/balls.png', {frameWidth: 17, frameHeight: 17});
+      // this.load.spritesheet('explosion', 'assets/sprites/explosion.png', {
+      //   frameWidth: 64,
+      //   frameHeight: 64,
+      //   endFrame: 23
+      // });
+      // this.load.spritesheet('balls', 'assets/sprites/balls.png', {frameWidth: 17, frameHeight: 17});
+      //
+      // Config object
+      // this.load.spritesheet({
+      //   key: 'explosion',
+      //   file: 'assets/sprites/explosion.png',
+      //   config: {frameWidth: 64, frameHeight: 64, endFrame: 23}
+      // });
+      // this.load.spritesheet({
+      //   key: 'balls',
+      //   file: 'assets/sprites/balls.png',
+      //   config: {frameWidth: 17, frameHeight: 17}
+      // });
+      //
+      this.load.setPath('assets/sprites');
+
+      // Automatic filenames based on key and path:
+      // this.load.spritesheet({key: 'explosion', config: {frameWidth: 64, frameHeight: 64, endFrame: 23}});
+      //
+      // An array of sprite sheets:
+      this.load.spritesheet([
+        {key: 'explosion', config: {frameWidth: 64, frameHeight: 64, endFrame: 23}},
+        {key: 'balls', config: {frameWidth: 17, frameHeight: 17}}
+      ]);
     }
 
     create () {
