@@ -44,6 +44,7 @@
       //
       this.load.on('progress', (value) => {
         progress.fillRect(0, 300, 800 * value, 60);
+        progress.alpha = value;
       });
       //
       this.load.audio('goldrunner', 'assets/audio/Scyphe-Goldrunner_(Maccie_Pimp_Me Up_Remix).mp3');
