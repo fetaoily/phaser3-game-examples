@@ -53,6 +53,8 @@
       //
       this.graphics.fillStyle(0xff0000, 1);
       this.graphics.fillCircle(this.follower.vec.x, this.follower.vec.y, 12);
+      //
+      this.graphics.alpha = this.follower.t;
     }
 
     render () {
