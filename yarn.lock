@@ -860,9 +860,9 @@ path-type@3.0.0:
   dependencies:
     pify "^3.0.0"
 
-phaser@3.3.0:
-  version "3.3.0"
-  resolved "http://registry.npm.taobao.org/phaser/download/phaser-3.3.0.tgz#9b9132fb973f280cce38c842db173569c6c05af1"
+phaser@3.4.0:
+  version "3.4.0"
+  resolved "http://registry.npm.taobao.org/phaser/download/phaser-3.4.0.tgz#e3b1e3fccad493cda6b657d9c88f850e12574819"
   dependencies:
     eventemitter3 "^3.0.1"
 
