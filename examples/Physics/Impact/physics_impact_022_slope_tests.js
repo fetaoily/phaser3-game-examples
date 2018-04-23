@@ -69,10 +69,13 @@
       let accel = this.player.standing ? this.player.body.accelGround : this.player.body.accelAir;
       if (this.cursors.left.isDown) {
         this.player.setAccelerationX(-accel);
+        // this.player.setVelocityX(-accel);
       } else if (this.cursors.right.isDown) {
         this.player.setAccelerationX(accel);
+        // this.player.setVelocityX(accel);
       } else {
         this.player.setAccelerationX(0);
+        // this.player.setVelocityX(0);
       }
       //
       if (this.cursors.up.isDown && this.player.body.standing) {
