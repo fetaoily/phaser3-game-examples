@@ -24,6 +24,7 @@
   class PlayGame extends ErtaoGameScene {
     constructor () {
       super();
+      this.timer = 0;
     }
 
     preload () {
@@ -32,7 +33,7 @@
     }
 
     create () {
-      let block = this.matter.add.image(400, 100, 'block');
+      let block = this.block = this.matter.add.image(400, 100, 'block');
       block.setFriction(0.05);
       block.setFrictionAir(0.0005);
       block.setBounce(0.9);
@@ -50,7 +51,11 @@
       });
     }
 
-    update () {
+    update (time, delta) {
+      if (time > this.timer) {
+        this.block.setVelocityY(-10);
+        this.timer = time + 2000;
+      }
     }
 
     render () {
