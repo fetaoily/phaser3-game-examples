@@ -46,6 +46,8 @@
       ground.setScale(2, 0.5);
       ground.setAngle(10);
       ground.setFriction(0.005);
+      //
+      // this.cameras.main.startFollow(this.ball);
     }
 
     update () {
