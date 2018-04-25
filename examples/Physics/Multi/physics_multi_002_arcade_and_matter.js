@@ -4,20 +4,6 @@
   let gameConfig;
   window.onload = () => {
     this.gameConfig = gameConfig = {
-      physics: {
-        arcade: {
-          debug: true,
-          gravity: {
-            y: 200
-          }
-        },
-        matter: {
-          debug: true,
-          gravity: {
-            y: 0.5
-          }
-        }
-      },
       scene: [PlayGame]
     };
     this.game = game = new NewGame(this.gameConfig);
@@ -31,7 +17,18 @@
 
   class PlayGame extends ErtaoGameScene {
     constructor () {
-      super();
+      super({
+        physics: {
+          arcade: {
+            debug: true,
+            gravity: {y: 200}
+          },
+          matter: {
+            debug: true,
+            gravity: {y: 0.5}
+          }
+        }
+      });
     }
 
     preload () {
@@ -42,7 +39,7 @@
 
     create () {
       // Matter JS:
-      this.matter.add.images(400, -100, 'block');
+      this.matter.add.image(400, -100, 'block');
       this.matter.add.image(360, -600, 'block');
       this.matter.add.image(420, -900, 'block');
       //
