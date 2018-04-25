@@ -48,6 +48,8 @@
         this.block.setPosition(50, 0);
         this.block.setVelocity(0, 0);
       }
+      //
+      this.block.angle += 10;
     }
 
     render () {
