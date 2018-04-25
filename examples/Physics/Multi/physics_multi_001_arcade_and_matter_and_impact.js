@@ -4,29 +4,6 @@
   let gameConfig;
   window.onload = () => {
     this.gameConfig = gameConfig = {
-      physics: {
-        // default: 'matter',
-        arcade: {
-          debug: true,
-          gravity: {y: 200}
-        },
-        matter: {
-          debug: true,
-          gravity: {y: 0.5}
-        },
-        impact: {
-          gravity: 100,
-          debug: true,
-          setBounds: {
-            x: 100,
-            y: 100,
-            width: 600,
-            height: 300,
-            thickness: 32
-          },
-          maxVelocity: 500
-        }
-      },
       scene: [PlayGame]
     };
     this.game = game = new NewGame(this.gameConfig);
@@ -40,7 +17,30 @@
 
   class PlayGame extends ErtaoGameScene {
     constructor () {
-      super();
+      super({
+        physics: {
+          arcade: {
+            debug: true,
+            gravity: {y: 200}
+          },
+          matter: {
+            debug: true,
+            gravity: {y: 0.5}
+          },
+          impact: {
+            gravity: 100,
+            debug: true,
+            setBounds: {
+              x: 100,
+              y: 100,
+              width: 600,
+              height: 300,
+              thickness: 32
+            },
+            maxVelocity: 500
+          }
+        }
+      });
     }
 
     preload () {
