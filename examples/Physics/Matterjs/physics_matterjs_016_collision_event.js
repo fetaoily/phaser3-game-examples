@@ -39,7 +39,7 @@
       //
       blockA.setVelocityX(10);
       //
-      this.matter.world.on('collisionstart', (Event, bodyA, bodyB) => {
+      this.matter.world.on('collisionstart', (event, bodyA, bodyB) => {
         bodyA.gameObject.setTint(0xff0000);
         bodyB.gameObject.setTint(0x00ff00);
         //
