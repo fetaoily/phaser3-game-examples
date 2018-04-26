@@ -81,12 +81,17 @@
 
     create () {
       //
-      let text = this.add.text(400, 300, 'SceneB', {font: '64px Arial', fill: '#ff00ff'});
+      let text = this.text = this.add.text(400, 300, 'SceneB', {font: '64px Arial', fill: '#ff00ff'});
       text.setOrigin(0.5);
       //
       this.input.on('pointerdown', () => {
         this.scene.start('sceneA');
       });
+    }
+
+    update () {
+      this.text.rotation += 0.01;
+      this.text.alpha = Math.abs(Math.sin(this.text.rotation));
     }
 
   }
