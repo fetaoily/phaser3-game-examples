@@ -4,7 +4,7 @@
   let gameConfig;
   window.onload = () => {
     this.gameConfig = gameConfig = {
-      scene: [PlayGame]
+      scene: [SceneA, SceneB]
     };
     this.game = game = new NewGame(this.gameConfig);
   };
@@ -15,9 +15,9 @@
     }
   }
 
-  class PlayGame extends ErtaoGameScene {
+  class SceneA extends ErtaoGameScene {
     constructor () {
-      super();
+      super({key: 'sceneA'});
     }
 
     preload () {
@@ -26,6 +26,7 @@
     }
 
     create () {
+      //
       this.add.image(400, 300, 'bg');
       //
       let blocks = this.add.group({key: 'block', repeat: 191});
@@ -60,9 +61,33 @@
           i = 0;
         }
       });
+      //
+      this.input.on('pointerdown', () => {
+        this.scene.start('sceneB');
+      }, this);
+      //
+      let text = this.add.text(400, 300, 'SceneA', {font: '64px Arial', fill: '#ff00ff'}).setDepth(0);
+      text.setOrigin(0.5);
     }
 
     update () {
     }
+  }
+
+  class SceneB extends ErtaoGameScene {
+    constructor () {
+      super({key: 'sceneB'});
+    }
+
+    create () {
+      //
+      let text = this.add.text(400, 300, 'SceneB', {font: '64px Arial', fill: '#ff00ff'});
+      text.setOrigin(0.5);
+      //
+      this.input.on('pointerdown', () => {
+        this.scene.start('sceneA');
+      });
+    }
+
   }
 })();
